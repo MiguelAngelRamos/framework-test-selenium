@@ -4,13 +4,19 @@ using TechTalk.SpecFlow;
 
 namespace SeleniumFramework.Steps
 {
+
+    [Binding]
     public class GoogleSearchSteps
     {
-        private readonly GooglePage googlePage;
+        private readonly ScenarioContext scenarioContext;
         private readonly IWebDriver driver;
+        private readonly GooglePage googlePage;
 
-        public GoogleSearchSteps()
+
+        public GoogleSearchSteps(ScenarioContext scenarioContext)
         {
+            this.scenarioContext = scenarioContext;
+            driver = (IWebDriver)this.scenarioContext["WebDriver"]; // Obtiene el WebDriver del contexto
             googlePage = new GooglePage(driver);
         }
 
@@ -26,7 +32,14 @@ namespace SeleniumFramework.Steps
             googlePage.EnterSearchText(searchText);
         }
 
-        [Then(@"Then The search results should contain the term Java")]
+        [When(@"I click the search button")]
+        public void WhenIClickTheSearchButton()
+        {
+            googlePage.ClickSearchButton();
+        }
+
+        // The search results should contain the term Java
+        [Then(@"The search results should contain the term Java")]
         public void ThenIShouldSeeSearchResults()
         {
             Assert.IsTrue(googlePage.GetContainSubString());
@@ -34,6 +47,7 @@ namespace SeleniumFramework.Steps
 
 
     }
+ 
 }
 
 /*

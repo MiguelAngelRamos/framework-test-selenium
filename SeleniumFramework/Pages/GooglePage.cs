@@ -30,6 +30,7 @@ namespace SeleniumFramework.Pages
         }
         public bool GetContainSubString()
         {
+            Console.WriteLine(driver.FindElements(elementosH3).FirstOrDefault()?.Text);
             return driver.FindElements(elementosH3).FirstOrDefault()?.Text.Contains("Java") ?? false;
         }
     }
