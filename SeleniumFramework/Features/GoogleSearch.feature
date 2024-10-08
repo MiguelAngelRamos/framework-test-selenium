@@ -4,4 +4,4 @@
     Given I am on the google search page
     When I enter "Java"
     And I click the search button
-    Then The search results should contain the term "Java"
+    Then The search results should contain the term Java

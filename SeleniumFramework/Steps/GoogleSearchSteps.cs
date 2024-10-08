@@ -19,6 +19,20 @@ namespace SeleniumFramework.Steps
         {
             googlePage.NavigateToGoogle();
         }
+
+        [When(@"I enter ""(.*)""")] //I enter "Java" 
+        public void WhenEnter(string searchText)
+        {
+            googlePage.EnterSearchText(searchText);
+        }
+
+        [Then(@"Then The search results should contain the term Java")]
+        public void ThenIShouldSeeSearchResults()
+        {
+            Assert.IsTrue(googlePage.GetContainSubString());
+        }
+
+
     }
 }
 
