@@ -10,6 +10,7 @@ namespace SeleniumFramework.Drivers
             // ChromeOptions options = new ChromeOptions();
             var options = new ChromeOptions();
             options.AddArguments("--start-maximized");
+            // options.AddArguments("--window-size=600,400");
             return new ChromeDriver(options);
         }
 
