@@ -1,4 +1,5 @@
-﻿Feature: Google Search
+﻿@Google
+Feature: Google Search
   
   Scenario: Search for a term in Google
     Given I am on the google search page

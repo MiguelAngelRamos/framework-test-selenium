@@ -24,8 +24,8 @@ namespace SeleniumFramework.Steps
 
         [AfterScenario]
         public void AfterScenario() { 
-            driver.Quit(); // Cierra Navegador
-            driver.Dispose(); // Libera los recursos
+            // driver.Quit(); // Cierra Navegador
+            // driver.Dispose(); // Libera los recursos
         }
     }
 }

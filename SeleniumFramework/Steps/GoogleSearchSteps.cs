@@ -6,6 +6,7 @@ namespace SeleniumFramework.Steps
 {
 
     [Binding]
+    [Scope(Tag = "Google")]
     public class GoogleSearchSteps
     {
         private readonly ScenarioContext scenarioContext;
