@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="5d586ea3-6485-4c6e-a23d-605cc7859408" name="Miguel@DESKTOP-8F1GC6C 2024-10-17 18:32:22" runUser="DESKTOP-8F1GC6C\Miguel" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2024-10-17T18:32:22.6909306-03:00" queuing="2024-10-17T18:32:22.6909310-03:00" start="2024-10-17T18:32:18.9809141-03:00" finish="2024-10-17T18:32:28.2364858-03:00" />
+  <TestSettings name="default" id="27b1ee2d-93f1-490e-9905-fe9958234be6">
+    <Deployment runDeploymentRoot="Miguel_DESKTOP-8F1GC6C_2024-10-17_18_32_22" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8a226342-d8dc-4449-89df-1d6107241c77" testId="fb4edb6a-a3bc-72c0-2a77-9b3528fbd929" testName="SearchForATermInGoogle" computerName="DESKTOP-8F1GC6C" duration="00:00:03.1484120" startTime="2024-10-17T18:32:19.4721052-03:00" endTime="2024-10-17T18:32:22.6204573-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a226342-d8dc-4449-89df-1d6107241c77">
+      <Output>
+        <StdOut>Given I am on the google search page&#xD;
+-&gt; done: GoogleSearchSteps.GivenIAmOnTheGoogleSearchPage() (0,8s)&#xD;
+When I enter "Java"&#xD;
+-&gt; done: GoogleSearchSteps.WhenEnter("Java") (0,0s)&#xD;
+And I click the search button&#xD;
+-&gt; done: GoogleSearchSteps.WhenIClickTheSearchButton() (0,1s)&#xD;
+Then The search results should contain the term Java&#xD;
+-&gt; done: GoogleSearchSteps.ThenIShouldSeeSearchResults() (0,9s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="06eb9c34-d06e-4e1f-9ed4-e624a45a1fdb" testId="90b87c81-25f0-85c8-4bda-74eb2267f417" testName="ComoClienteCuandoBuscoUnProductoQuieroVerSiLaTerceraOpcionEstaDisponibleParaComprarYSePuedeAgregarAlCarrito_(&quot;PlayStation&quot;,null)" computerName="DESKTOP-8F1GC6C" duration="00:00:03.0958030" startTime="2024-10-17T18:32:22.6245958-03:00" endTime="2024-10-17T18:32:25.7203981-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06eb9c34-d06e-4e1f-9ed4-e624a45a1fdb">
+      <Output>
+        <StdOut>Given el usuario navega a www.mercadolibre.cl&#xD;
+-&gt; done: MercadoLibreSearchSteps.GivenTheUserNavigatesToMercadoLibre() (1,7s)&#xD;
+When el usuario busca "PlayStation"&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [When(@"el usuario busca ""(.*)""")]&#xD;
+        public void WhenElUsuarioBusca(string playStation)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+And el usuario selecciona el tercer artículo&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [When(@"el usuario selecciona el tercer artículo")]&#xD;
+        public void WhenElUsuarioSeleccionaElTercerArticulo()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+Then después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]&#xD;
+        public void ThenDespuesDeHacerClickParaAgregarElArticuloAlCarritoSeLePideAlUsuarioQueInicieSesionOCreeUnaCuenta()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+&#xD;
+No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [When(@"el usuario busca ""(.*)""")]&#xD;
+        public void WhenElUsuarioBusca(string playStation0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [When(@"el usuario selecciona el tercer artículo")]&#xD;
+        public void WhenElUsuarioSeleccionaElTercerArticulo()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]&#xD;
+        public void ThenDespuesDeHacerClickParaAgregarElArticuloAlCarritoSeLePideAlUsuarioQueInicieSesionOCreeUnaCuenta()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}</StdOut>
+        <ErrorInfo>
+          <Message>No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [When(@"el usuario busca ""(.*)""")]&#xD;
+        public void WhenElUsuarioBusca(string playStation0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [When(@"el usuario selecciona el tercer artículo")]&#xD;
+        public void WhenElUsuarioSeleccionaElTercerArticulo()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]&#xD;
+        public void ThenDespuesDeHacerClickParaAgregarElArticuloAlCarritoSeLePideAlUsuarioQueInicieSesionOCreeUnaCuenta()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2dc4963c-4eca-424c-b1ff-70831b1f5f0a" testId="8e273348-329d-b0ad-9828-dceb0415688b" testName="VerificarElMensajeDeErrorPorFormatoInvalidoDeCorreoElectronico" computerName="DESKTOP-8F1GC6C" duration="00:00:02.4321690" startTime="2024-10-17T18:32:25.7212485-03:00" endTime="2024-10-17T18:32:28.1534169-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2dc4963c-4eca-424c-b1ff-70831b1f5f0a">
+      <Output>
+        <StdOut>Given el usuario navega al formulario&#xD;
+-&gt; done: FormSteps.GivenElUsuarioNavegaAlFormulario() (0,6s)&#xD;
+When el usuario ingresa "Sofia" en el campo de texto&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeTexto("Sofia") (0,1s)&#xD;
+And el usuario ingresa "usuario@dominio" en el campo de correo electrónico&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeCorreoElectronico("usuario@dominio") (0,1s)&#xD;
+And el usuario ingresa "secretoabsoluto" en el campo de contraseña&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeContrasena("secretoabsoluto") (0,1s)&#xD;
+And el usuario selecciona "opcion1" del desplegable&#xD;
+-&gt; done: FormSteps.WhenElUsuarioSeleccionaDelDesplegable("opcion1") (0,1s)&#xD;
+And el usuario selecciona el radio button&#xD;
+-&gt; done: FormSteps.WhenElUsuarioSeleccionaElRadioButton() (0,0s)&#xD;
+And el usuario marca el checkbox&#xD;
+-&gt; done: FormSteps.WhenElUsuarioMarcaElCheckbox() (0,0s)&#xD;
+And el usuario envía el formulario&#xD;
+-&gt; done: FormSteps.WhenElUsuarioEnviaElFormulario() (0,0s)&#xD;
+Then el mensaje de error de correo inválido debe aparecer&#xD;
+-&gt; done: FormSteps.ThenElMensajeDeErrorDeCorreoInvalidoDebeAparecer() (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ComoClienteCuandoBuscoUnProductoQuieroVerSiLaTerceraOpcionEstaDisponibleParaComprarYSePuedeAgregarAlCarrito_(&quot;PlayStation&quot;,null)" storage="c:\users\miguel\source\repos\seleniumframework\seleniumframework\bin\debug\net8.0\seleniumframework.dll" id="90b87c81-25f0-85c8-4bda-74eb2267f417">
+      <Execution id="06eb9c34-d06e-4e1f-9ed4-e624a45a1fdb" />
+      <TestMethod codeBase="C:\Users\Miguel\source\repos\SeleniumFramework\SeleniumFramework\bin\Debug\net8.0\SeleniumFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumFramework.Features.ProbarLaFuncionalidadDeBusquedaDeMercadoLibreFeature" name="ComoClienteCuandoBuscoUnProductoQuieroVerSiLaTerceraOpcionEstaDisponibleParaComprarYSePuedeAgregarAlCarrito_(&quot;PlayStation&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="VerificarElMensajeDeErrorPorFormatoInvalidoDeCorreoElectronico" storage="c:\users\miguel\source\repos\seleniumframework\seleniumframework\bin\debug\net8.0\seleniumframework.dll" id="8e273348-329d-b0ad-9828-dceb0415688b">
+      <Execution id="2dc4963c-4eca-424c-b1ff-70831b1f5f0a" />
+      <TestMethod codeBase="C:\Users\Miguel\source\repos\SeleniumFramework\SeleniumFramework\bin\Debug\net8.0\SeleniumFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumFramework.Features.ValidarFormularioDeIngresoFeature" name="VerificarElMensajeDeErrorPorFormatoInvalidoDeCorreoElectronico" />
+    </UnitTest>
+    <UnitTest name="SearchForATermInGoogle" storage="c:\users\miguel\source\repos\seleniumframework\seleniumframework\bin\debug\net8.0\seleniumframework.dll" id="fb4edb6a-a3bc-72c0-2a77-9b3528fbd929">
+      <Execution id="8a226342-d8dc-4449-89df-1d6107241c77" />
+      <TestMethod codeBase="C:\Users\Miguel\source\repos\SeleniumFramework\SeleniumFramework\bin\Debug\net8.0\SeleniumFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumFramework.Features.GoogleSearchFeature" name="SearchForATermInGoogle" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="fb4edb6a-a3bc-72c0-2a77-9b3528fbd929" executionId="8a226342-d8dc-4449-89df-1d6107241c77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90b87c81-25f0-85c8-4bda-74eb2267f417" executionId="06eb9c34-d06e-4e1f-9ed4-e624a45a1fdb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e273348-329d-b0ad-9828-dceb0415688b" executionId="2dc4963c-4eca-424c-b1ff-70831b1f5f0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in C:\Users\Miguel\source\repos\SeleniumFramework\SeleniumFramework\bin\Debug\net8.0\SeleniumFramework.dll&#xD;
+   NUnit3TestExecutor discovered 3 of 3 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+Starting ChromeDriver 129.0.6668.100 (cf58cba358d31ce285c1970a79a9411d0fb381a5-refs/branch-heads/6668@{#1704}) on port 61250&#xD;
+Only local connections are allowed.&#xD;
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.&#xD;
+ChromeDriver was started successfully on port 61250.&#xD;
+Starting ChromeDriver 129.0.6668.100 (cf58cba358d31ce285c1970a79a9411d0fb381a5-refs/branch-heads/6668@{#1704}) on port 61273&#xD;
+Only local connections are allowed.&#xD;
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.&#xD;
+ChromeDriver was started successfully on port 61273.&#xD;
+ComoClienteCuandoBuscoUnProductoQuieroVerSiLaTerceraOpcionEstaDisponibleParaComprarYSePuedeAgregarAlCarrito_("PlayStation",null): No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [When(@"el usuario busca ""(.*)""")]&#xD;
+        public void WhenElUsuarioBusca(string playStation0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [When(@"el usuario selecciona el tercer artículo")]&#xD;
+        public void WhenElUsuarioSeleccionaElTercerArticulo()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+        &#xD;
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]&#xD;
+        public void ThenDespuesDeHacerClickParaAgregarElArticuloAlCarritoSeLePideAlUsuarioQueInicieSesionOCreeUnaCuenta()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+&#xD;
+Starting ChromeDriver 129.0.6668.100 (cf58cba358d31ce285c1970a79a9411d0fb381a5-refs/branch-heads/6668@{#1704}) on port 61317&#xD;
+Only local connections are allowed.&#xD;
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.&#xD;
+ChromeDriver was started successfully on port 61317.&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-8F1GC6C" outcome="Warning" timestamp="2024-10-17T18:32:22.6363244-03:00">
+        <Text>Given I am on the google search page&#xD;
+-&gt; done: GoogleSearchSteps.GivenIAmOnTheGoogleSearchPage() (0,8s)&#xD;
+When I enter "Java"&#xD;
+-&gt; done: GoogleSearchSteps.WhenEnter("Java") (0,0s)&#xD;
+And I click the search button&#xD;
+-&gt; done: GoogleSearchSteps.WhenIClickTheSearchButton() (0,1s)&#xD;
+Then The search results should contain the term Java&#xD;
+-&gt; done: GoogleSearchSteps.ThenIShouldSeeSearchResults() (0,9s)&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-8F1GC6C" outcome="Warning" timestamp="2024-10-17T18:32:25.7215679-03:00">
+        <Text>Given el usuario navega a www.mercadolibre.cl&#xD;
+-&gt; done: MercadoLibreSearchSteps.GivenTheUserNavigatesToMercadoLibre() (1,7s)&#xD;
+When el usuario busca "PlayStation"&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [When(@"el usuario busca ""(.*)""")]&#xD;
+        public void WhenElUsuarioBusca(string playStation)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+And el usuario selecciona el tercer artículo&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [When(@"el usuario selecciona el tercer artículo")]&#xD;
+        public void WhenElUsuarioSeleccionaElTercerArticulo()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+Then después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]&#xD;
+        public void ThenDespuesDeHacerClickParaAgregarElArticuloAlCarritoSeLePideAlUsuarioQueInicieSesionOCreeUnaCuenta()&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-8F1GC6C" outcome="Warning" timestamp="2024-10-17T18:32:28.1540889-03:00">
+        <Text>Given el usuario navega al formulario&#xD;
+-&gt; done: FormSteps.GivenElUsuarioNavegaAlFormulario() (0,6s)&#xD;
+When el usuario ingresa "Sofia" en el campo de texto&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeTexto("Sofia") (0,1s)&#xD;
+And el usuario ingresa "usuario@dominio" en el campo de correo electrónico&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeCorreoElectronico("usuario@dominio") (0,1s)&#xD;
+And el usuario ingresa "secretoabsoluto" en el campo de contraseña&#xD;
+-&gt; done: FormSteps.WhenElUsuarioIngresaEnElCampoDeContrasena("secretoabsoluto") (0,1s)&#xD;
+And el usuario selecciona "opcion1" del desplegable&#xD;
+-&gt; done: FormSteps.WhenElUsuarioSeleccionaDelDesplegable("opcion1") (0,1s)&#xD;
+And el usuario selecciona el radio button&#xD;
+-&gt; done: FormSteps.WhenElUsuarioSeleccionaElRadioButton() (0,0s)&#xD;
+And el usuario marca el checkbox&#xD;
+-&gt; done: FormSteps.WhenElUsuarioMarcaElCheckbox() (0,0s)&#xD;
+And el usuario envía el formulario&#xD;
+-&gt; done: FormSteps.WhenElUsuarioEnviaElFormulario() (0,0s)&#xD;
+Then el mensaje de error de correo inválido debe aparecer&#xD;
+-&gt; done: FormSteps.ThenElMensajeDeErrorDeCorreoInvalidoDebeAparecer() (0,0s)&#xD;
+</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

@@ -27,6 +27,25 @@ namespace SeleniumFramework.Steps
         {
             mercadoLibrePage.NavigateToMercadoLibre();
         }
+        [When(@"el usuario busca ""(.*)""")]
+        public void WhenTheUserSearchesFor(string searchText)
+        {
+            mercadoLibrePage.EnterSearchCriteria(searchText); // Ingresa el término de búsqueda
+            mercadoLibrePage.ClickSearchButton(); // Haz clic en el botón de búsqueda
+        }
+        [When(@"el usuario selecciona el tercer artículo")]
+        public void WhenTheUserSelectsTheThirdItem()
+        {
+            mercadoLibrePage.PickThirdItem(); // Selecciona el tercer elemento en la página de resultados
+        }
+        [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]
+        public void ThenTheUserIsAbleToAddTheItemToTheCart()
+        {
+
+            mercadoLibrePage.AddToCard();
+                                      //Assert.IsTrue(_mercadoPage.GetAddedToCartMessage().Contains("cantidad")); // Verifica que el mensaje de "añadido al carrito" esté presente
+            Assert.IsTrue(mercadoLibrePage.GetMessageCreateAccount().Contains("¡Hola! Para agregar al carrito, ingresa a tu cuenta"));
+        }
     }
 }
 
