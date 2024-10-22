@@ -41,11 +41,18 @@ namespace SeleniumFramework.Steps
         [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]
         public void ThenTheUserIsAbleToAddTheItemToTheCart()
         {
-
             mercadoLibrePage.AddToCard();
-                                      //Assert.IsTrue(_mercadoPage.GetAddedToCartMessage().Contains("cantidad")); // Verifica que el mensaje de "añadido al carrito" esté presente
-            Assert.IsTrue(mercadoLibrePage.GetMessageCreateAccount().Contains("¡Hola! Para agregar al carrito, ingresa a tu cuenta"));
+
+            // Obtiene el mensaje que aparece en la página
+            var actualMessage = mercadoLibrePage.GetMessageCreateAccount();
+
+            // Verifica si el mensaje recibido es uno de los dos posibles
+            bool isExpectedMessage = actualMessage.Contains("¡Hola! Para agregar al carrito, ingresa a tu cuenta") ||
+                                     actualMessage.Contains("¡Hola! Para comprar, ingresa a tu cuenta");
+
+            Assert.IsTrue(isExpectedMessage, $"El mensaje recibido fue: '{actualMessage}', pero se esperaba '¡Hola! Para agregar al carrito, ingresa a tu cuenta' o '¡Hola! Para comprar, ingresa a tu cuenta'.");
         }
+
     }
 }
 
