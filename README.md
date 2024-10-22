@@ -5,3 +5,9 @@
 3. Selenium.Support
 4. SpecFlow.NUnit
 5. SpecFlow.Tools.MsBuild.Generation
+
+## Ejemplo de Ejecución  por consola
+
+```bash
+dotnet test --filter "TestCategory=MercadoLibre"
+```
