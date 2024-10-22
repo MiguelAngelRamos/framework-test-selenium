@@ -5,9 +5,9 @@ Feature: Probar la funcionalidad de búsqueda de MercadoLibre
 
     Given el usuario navega a www.mercadolibre.cl
     When el usuario busca "<Product>"
-    And el usuario selecciona el tercer artículo
+    And el usuario selecciona el segundo artículo
     Then después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta
 
   Examples:
     | Product     |
-    | PlayStation |
+    | Nintendo    |

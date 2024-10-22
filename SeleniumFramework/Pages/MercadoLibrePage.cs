@@ -6,8 +6,9 @@ namespace SeleniumFramework.Pages
     {
         private readonly By searchBox = By.Name("as_word");
         private readonly By searchButton = By.CssSelector("button.nav-search-btn");
-        private readonly By thirdResult = By.XPath("//li[3]//h2/a");
-        private readonly By addCartButton = By.CssSelector("button[id=':R2aqakck4um:'] span[class='andes-button__content']");
+        private readonly By secondResult = By.XPath("//li[2]//h2/a");
+        private readonly By addCartButton = By.XPath("//*[@id=':R16qakck4um:']");
+        
         private readonly By messageRegisterAccount = By.CssSelector(".center-card__title");
         // private readonly By addCartButton = By.Id(":R2aqakck4um:");
         // center-card__title
@@ -30,9 +31,9 @@ namespace SeleniumFramework.Pages
             ClickElement(searchButton);
         }
 
-        public void PickThirdItem()
+        public void PickSecondItem()
         {
-            ClickElement(thirdResult);
+            ClickElement(secondResult);
         }
 
         public void AddToCard()

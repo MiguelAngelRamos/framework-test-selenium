@@ -78,7 +78,7 @@ namespace SeleniumFramework.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Como cliente, cuando busco un producto, quiero ver si la tercera opción está disp" +
             "onible para comprar y se puede agregar al carrito.")]
-        [NUnit.Framework.TestCaseAttribute("PlayStation", null)]
+        [NUnit.Framework.TestCaseAttribute("Nintendo", null)]
         public void ComoClienteCuandoBuscoUnProductoQuieroVerSiLaTerceraOpcionEstaDisponibleParaComprarYSePuedeAgregarAlCarrito_(string product, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -103,7 +103,7 @@ namespace SeleniumFramework.Features
     testRunner.When(string.Format("el usuario busca \"{0}\"", product), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
-    testRunner.And("el usuario selecciona el tercer artículo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("el usuario selecciona el segundo artículo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
     testRunner.Then("después de hacer click para agregar el artículo al carrito, se le pide al usuario" +

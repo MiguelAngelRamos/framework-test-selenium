@@ -38,6 +38,7 @@ namespace SeleniumFramework.Pages
 
         public void SelectRadio1()
         {
+      
             ClickElement(radio1);
         }
 
@@ -61,5 +62,6 @@ namespace SeleniumFramework.Pages
         {
             return ElementIsDisplayed(emailErrorMessage);
         }
+
     }
 }

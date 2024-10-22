@@ -33,10 +33,10 @@ namespace SeleniumFramework.Steps
             mercadoLibrePage.EnterSearchCriteria(searchText); // Ingresa el término de búsqueda
             mercadoLibrePage.ClickSearchButton(); // Haz clic en el botón de búsqueda
         }
-        [When(@"el usuario selecciona el tercer artículo")]
+        [When(@"el usuario selecciona el segundo artículo")]
         public void WhenTheUserSelectsTheThirdItem()
         {
-            mercadoLibrePage.PickThirdItem(); // Selecciona el tercer elemento en la página de resultados
+            mercadoLibrePage.PickSecondItem(); // Selecciona el tercer elemento en la página de resultados
         }
         [Then(@"después de hacer click para agregar el artículo al carrito, se le pide al usuario que inicie sesión o cree una cuenta")]
         public void ThenTheUserIsAbleToAddTheItemToTheCart()

@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
@@ -13,11 +14,13 @@ namespace SeleniumFramework.Pages
     {
         protected IWebDriver driver;
         protected WebDriverWait wait;
+        protected Actions actions; // Instancia de Actions a nivel de clase
 
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            actions = new Actions(driver); // Inicializar Actions una vez
         }
 
         // Metodo navegar a cualquier sitio
@@ -41,7 +44,39 @@ namespace SeleniumFramework.Pages
         // Para realizar click en elementos (button, input)
         public void ClickElement(By locator)
         {
-            FindElement(locator).Click();
+            IWebElement element = FindElement(locator);
+            // Desplazar al centro antes de intentar el clic
+            ScrollToElementCenter(locator);
+            try
+            {
+                Console.WriteLine("Intentando hacer click con Actions..."); // Registro de intento con Actions
+                actions.MoveToElement(element).Click().Perform(); // Usar Actions para hacer click
+                Console.WriteLine("Click realizado con Actions.");
+            }
+            catch (ElementClickInterceptedException)
+            {
+                Console.WriteLine("Clic con Actions fallido, intentando con scroll..."); // Registro de intento de scroll
+                ScrollToElement(locator); // Desplazar si es necesario
+                FindElement(locator).Click(); // Intentar el clic nuevamente
+                Console.WriteLine("Clic realizado después del scroll.");
+            }
+
+            /*
+             El try: Intenta hacer clic en el elemento usando un método más confiable (Actions). 
+             Si el clic es exitoso, la ejecución continúa sin problemas.
+             El catch: Si ocurre la excepción ElementClickInterceptedException, 
+             el bloque de catch toma el control. 
+             En lugar de solo mostrar un mensaje de error, se hace un nuevo 
+             intento después de desplazarse al elemento para asegurarse
+             de que esté completamente visible y clicable.
+
+
+            ¿Por qué no lanzar un mensaje de error directamente en el catch?
+             El objetivo del catch en este caso es intentar recuperar la acción fallida (hacer clic en el elemento) 
+             antes de considerar la prueba como fallida. En las pruebas de UI con Selenium, 
+             este enfoque es común para hacerlas más robustas y menos propensas a fallar por 
+             condiciones transitorias o problemas de sincronización de la página.
+             */
         }
 
         // Para poder escribir un elemento
@@ -77,6 +112,19 @@ namespace SeleniumFramework.Pages
         {
             // Esta es la línea nueva agregada de Pruebadeformato invalido
             return FindElement(locator).GetAttribute("class").Contains("is-invalid");
+        }
+
+        // Método para desplazar al elemento
+        public void ScrollToElement(By locator)
+        {
+            IWebElement element = FindElement(locator);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", element);
+        }
+        // Desplazar hacia el centro del elemento
+        public void ScrollToElementCenter(By locator)
+        {
+            IWebElement element = FindElement(locator);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView({block: 'center'});", element);
         }
 
     }
